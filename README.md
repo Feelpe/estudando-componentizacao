@@ -4,12 +4,12 @@ forked from rocketseat-education/ignite-template-componentizando-a-aplicacao
 A project for training React Componentization with typescript. \
 It's a list of movies.
 
-# Running the app
+## Running the app
 
-## Dependent of 
+### Dependent of 
 yarn
 
-## In the project directory, you can run:
+### In the project directory, you can run:
 
 ```bash
   #Installation
