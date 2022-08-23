@@ -1,5 +1,5 @@
 # React Componentization Study
-forked from rocketseat-education/ignite-template-componentizando-a-aplicacao \
+forked from rocketseat-education/ignite-template-componentizando-a-aplicacao 
 
 A project for training React Componentization with typescript. \
 It's a list of movies.
