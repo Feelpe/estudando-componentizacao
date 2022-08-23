@@ -4,7 +4,7 @@ import { Button } from './Button';
 
 import { api } from '../services/api';
 
-import './styles/sidebar.scss';
+import '../styles/sidebar.scss';
 
 interface GenreResponseProps {
   id: number;
@@ -12,13 +12,13 @@ interface GenreResponseProps {
   title: string;
 }
 
-export function SideBar() {
-  const [selectedGenreId, setSelectedGenreId] = useState(1);
-  const [genres, setGenres] = useState<GenreResponseProps[]>([]);
+interface SidebarProps {
+  handleClickButton: (id: number) => void;
+  selectedGenreId: number;
+}
 
-  function handleClickButton(id: number) {
-    setSelectedGenreId(id);
-  }
+export function SideBar({ handleClickButton, selectedGenreId }: SidebarProps) {
+  const [genres, setGenres] = useState<GenreResponseProps[]>([]);
 
   useEffect(() => {
     api.get<GenreResponseProps[]>('genres').then(response => {

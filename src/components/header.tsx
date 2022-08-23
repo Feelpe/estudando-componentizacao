@@ -7,15 +7,12 @@ interface GenreResponseProps {
   title: string;
 }
 
-interface Id {
-  filmId: number;
+interface HeaderProps {
+  selectedGenreId: number;
 }
 
-export function Header(props: Id) {
-  const [selectedGenreId, setSelectedGenreId] = useState(1);
+export function Header({ selectedGenreId }: HeaderProps) {
   const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>({} as GenreResponseProps);
-
-  setSelectedGenreId(props.filmId);
 
   useEffect(() => {
     api.get<GenreResponseProps>(`genres/${selectedGenreId}`).then(response => {

@@ -15,13 +15,13 @@ export function App() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
-      <SideBar/>
+      <SideBar handleClickButton={handleClickButton} selectedGenreId={selectedGenreId}/>
 
       <div className="container">
-        <Header filmId={id}/>
+        <Header selectedGenreId={selectedGenreId}/>
 
         <main>
-          <Content filmId={id}/>
+          <Content selectedGenreId={selectedGenreId}/>
         </main>
       </div>
     </div>
